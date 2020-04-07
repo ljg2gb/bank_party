@@ -21,6 +21,5 @@ act6 = Account.new("34254", 90000, chase, bob)
 act7 = Account.new("553563", 83325, cap_one, john)
 
 
+# bob.new_account(20000, 44444444, cap_one)
 binding.pry
-
-bob.accounts
