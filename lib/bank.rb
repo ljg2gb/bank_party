@@ -37,13 +37,9 @@ class Bank
     end
 
     def self.most_customers
-        bank_w_most_customers = Bank.all[0]
-        i = 1
-        if Bank.all[i].customers.length > bank_w_most_customers.customers.length
-            bank_w_most_customers = Bank.all[i]
-            i += 1
+        all.max_by do |bank|
+            bank.customers.length
         end
-        bank_w_most_customers
     end
 
     def self.customer_count
@@ -63,11 +59,10 @@ class Bank
             acc + customer.age
         end
         total_age / unique_customers.length
-        #customers.age
     end
 
     def self.most_branches
-
+        
     end
 
 end 
